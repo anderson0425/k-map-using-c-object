@@ -20,7 +20,7 @@ class Operands{
       int getSIGN(void) const;
       void setSIGN(bool S);
       //string toString(void)const; // returns a string representation of a Card
-      Rational operator+( Operands & ); //logic or
+      Operands operator+( Operands & right); //logic or
 
    private:
       bool SIGN; //0 或 1  true_or_false

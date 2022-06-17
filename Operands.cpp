@@ -13,13 +13,13 @@ Operands:: Operands(const Operands & right){
     (*this).SIGN = right.SIGN; 
 }
 
-int Operands:: getSIGN(void) const{ return (*this).SIGN; }
+int Operands:: getSIGN(void) const{ return int((*this).SIGN); }
 
 
 void Operands:: setSIGN(bool S){ (*this).SIGN = S; }
 
 //logic or
-Rational Operands::operator+( Operands & right ) { //in main:  c=a+b;        C = A or B
+Operands Operands::operator+( Operands & right ) { //in main:  c=a+b;        C = A or B
     Operands re;  
     re.SIGN = (this->SIGN) | (right.SIGN);
     return re;

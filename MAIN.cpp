@@ -6,10 +6,12 @@ using namespace std;
 
 int main(){
     Operands X(false), Y(true), Z(true);
-    X.getSIGN();  Y.getSIGN();  Z.getSIGN(); 
+    cout<<X.getSIGN();  cout<<Y.getSIGN();  cout<<Z.getSIGN(); 
 
     Operands Q = X; //copy constructor 
-    Operands R = X + Y;  //logic or
+    cout<<Q.getSIGN();
+    Operands R = (X + Y);  //logic or
+    cout<<R.getSIGN();
 
     return 0;
 }
